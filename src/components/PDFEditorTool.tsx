@@ -755,7 +755,7 @@ export default function PDFEditorTool() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard 
-            icon={<Type className="text-blue-600" />} 
+            icon={<Type className="text-indigo-600" />} 
             title="Add Text" 
             desc="Overlay new content seamlessly" 
             color="blue"
@@ -789,14 +789,14 @@ export default function PDFEditorTool() {
               onClick={() => setShowThumbnails(!showThumbnails)}
               className={cn(
                 "p-2 rounded-lg sm:p-2.5 sm:rounded-xl transition-all",
-                showThumbnails ? "bg-slate-100 text-slate-600" : "bg-blue-50 text-blue-600"
+                showThumbnails ? "bg-slate-100 text-slate-600" : "bg-indigo-50 text-indigo-600"
               )}
               title={showThumbnails ? "Hide Navigation" : "Show Navigation"}
             >
               <PanelLeft size={18} className="sm:w-5 sm:h-5" />
             </button>
             <div className="hidden sm:block w-px h-8 bg-slate-200 dark:bg-slate-800 mx-1" />
-            <div className="hidden xs:flex w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-lg sm:rounded-xl items-center justify-center text-white shadow-lg shadow-blue-600/20">
+            <div className="hidden xs:flex w-8 h-8 sm:w-10 sm:h-10 bg-indigo-600 rounded-lg sm:rounded-xl items-center justify-center text-white shadow-lg shadow-indigo-600/20">
               <FileCheck size={16} className="sm:w-5 sm:h-5" />
             </div>
             <div className="max-w-[80px] xs:max-w-[120px] sm:max-w-[200px]">
@@ -854,7 +854,7 @@ export default function PDFEditorTool() {
               onClick={toggleFullscreen}
               className={cn(
                 "p-2 rounded-lg transition-all hidden sm:flex",
-                isFullscreen ? "bg-blue-600 text-white shadow-lg" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400"
+                isFullscreen ? "bg-indigo-600 text-white shadow-lg" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400"
               )}
               title="Fullscreen Mode"
             >
@@ -880,14 +880,14 @@ export default function PDFEditorTool() {
                 disabled={isProcessing}
                 className="flex items-center gap-1.5 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg text-[10px] font-black text-slate-700 dark:text-slate-200 shadow-sm transition-all active:scale-95 disabled:opacity-50"
               >
-                <Save size={14} className="text-blue-600" />
+                <Save size={14} className="text-indigo-600" />
                 <span className="hidden xs:inline">SAVE</span>
               </button>
               
               <button
                 onClick={handleApplyChanges}
                 disabled={isProcessing}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-lg text-[10px] font-black shadow-lg shadow-blue-600/20 transition-all flex items-center gap-1.5 sm:gap-2 disabled:opacity-50 active:scale-95 group"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-lg text-[10px] font-black shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-1.5 sm:gap-2 disabled:opacity-50 active:scale-95 group"
               >
                 {isProcessing ? (
                   <RefreshCw className="animate-spin" size={14} />

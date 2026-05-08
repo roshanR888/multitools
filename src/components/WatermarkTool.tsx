@@ -17,7 +17,7 @@ interface Watermark {
 export default function WatermarkTool() {
   const [sourceImage, setSourceImage] = useState<string | null>(null);
   const [watermarks, setWatermarks] = useState<Watermark[]>([
-    { id: Date.now(), text: '© MediaSpark', x: 0.5, y: 0.5, rotation: 0, opacity: 50, fontSize: 50 }
+    { id: Date.now(), text: 'imagemb2kb.com', x: 0.5, y: 0.5, rotation: 0, opacity: 50, fontSize: 40 }
   ]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);

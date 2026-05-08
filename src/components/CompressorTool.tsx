@@ -102,13 +102,13 @@ export default function CompressorTool() {
               <div className="aspect-square rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex items-center justify-center relative">
                 {isProcessing ? (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm z-10">
-                    <RefreshCw className="animate-spin text-blue-600" />
+                    <RefreshCw className="animate-spin text-indigo-600" />
                   </div>
                 ) : null}
                 {compressedImage && <img src={compressedImage} className="w-full h-full object-contain" alt="Compressed" />}
               </div>
               <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-blue-600">{formatBytes(compressedSize || 0)}</p>
+                <p className="text-sm font-semibold text-indigo-600">{formatBytes(compressedSize || 0)}</p>
                 <div className="text-xs font-bold px-2 py-1 bg-green-500/10 text-green-500 rounded-lg">
                   -{Math.round((1 - (compressedSize || 0) / (originalFile?.size || 1)) * 100)}%
                 </div>
@@ -118,7 +118,7 @@ export default function CompressorTool() {
 
           <div className="glass-card space-y-4">
             <div className="flex justify-between items-center">
-              <label className="text-sm font-bold">Target Size: <span className="text-blue-600">{targetSizeKb} KB</span></label>
+              <label className="text-sm font-bold">Target Size: <span className="text-indigo-600">{targetSizeKb} KB</span></label>
             </div>
             <input 
               type="range" 
@@ -127,7 +127,7 @@ export default function CompressorTool() {
               step="10"
               value={targetSizeKb}
               onChange={(e) => setTargetSizeKb(parseInt(e.target.value))}
-              className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+              className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
             />
           </div>
 
@@ -135,7 +135,7 @@ export default function CompressorTool() {
             <button
               onClick={handleDownload}
               disabled={isProcessing}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95 disabled:opacity-50"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95 disabled:opacity-50"
             >
               <Download size={20} />
               Download Compressed Image

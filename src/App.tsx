@@ -85,12 +85,18 @@ export default function App() {
           >
             {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-          <div id="brand-container" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">
-              MS
+          <div id="brand-container" className="flex items-center gap-3 active:scale-95 transition-all cursor-pointer group">
+            <div className="relative w-10 h-10 flex items-center justify-center">
+              <div className="absolute inset-0 bg-indigo-600 rounded-2xl shadow-xl shadow-indigo-500/20 group-hover:rotate-6 transition-transform duration-300" />
+              <div className="absolute inset-0 border-2 border-indigo-200 dark:border-indigo-400/20 rounded-2xl group-hover:-rotate-6 transition-transform duration-300" />
+              <div className="relative z-10 flex flex-col items-center leading-none">
+                <span className="text-white text-[10px] font-black tracking-tighter">IMG</span>
+                <div className="w-4 h-0.5 bg-indigo-300/60 rounded-full mt-0.5" />
+              </div>
             </div>
-            <h1 id="app-title" className="font-display font-bold text-xl tracking-tight hidden sm:block">
-              MediaSpark
+            <h1 id="app-title" className="font-display tracking-tighter hidden sm:flex items-baseline">
+              <span className="text-slate-900 dark:text-white font-black text-2xl">image</span>
+              <span className="text-indigo-600 dark:text-indigo-400 font-mono font-bold text-xl ml-1">mb2kb</span>
             </h1>
           </div>
         </div>
@@ -104,7 +110,7 @@ export default function App() {
             onClick={() => setIsDarkMode(!isDarkMode)}
             className="p-2.5 glass-card !p-2 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-none"
           >
-            {isDarkMode ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-blue-600" />}
+            {isDarkMode ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-indigo-600" />}
           </button>
         </div>
       </nav>
@@ -129,7 +135,7 @@ export default function App() {
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all group",
                   activeTool === tool.id 
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20" 
+                    ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20" 
                     : "hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400"
                 )}
               >
@@ -176,7 +182,7 @@ export default function App() {
               {/* Header */}
               <header id="tool-header" className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 bg-blue-600 rounded-2xl text-white shadow-xl shadow-blue-600/20">
+                  <div className="p-3 bg-indigo-600 rounded-2xl text-white shadow-xl shadow-indigo-600/20">
                     <currentTool.icon size={24} />
                   </div>
                   <div>
@@ -248,7 +254,7 @@ export default function App() {
                   <h4 className="text-[10px] font-black uppercase text-slate-400 mb-2">Recommended Tools</h4>
                   <div className="space-y-2">
                     {TOOLS.slice(0, 3).map(tool => (
-                      <button key={tool.id} onClick={() => setActiveTool(tool.id)} className="w-full text-left text-xs font-medium text-blue-600 hover:underline truncate italic">
+                      <button key={tool.id} onClick={() => setActiveTool(tool.id)} className="w-full text-left text-xs font-medium text-indigo-600 hover:underline truncate italic">
                         Try {tool.name} →
                       </button>
                     ))}
