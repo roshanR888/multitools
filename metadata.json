@@ -1,0 +1,8 @@
+{
+  "name": "MediaSpark Utility Suite",
+  "description": "A high-performance, zero-cost media toolkit for image compression, resizing, background removal, and OCR, optimized for speed and SEO.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
