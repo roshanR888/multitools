@@ -30,7 +30,6 @@ import { cn, fileToDataUrl, downloadBlob, formatBytes, dataUrlToBlob } from './l
 // Tool Components (to be implemented)
 import CompressorTool from './components/CompressorTool';
 import ResizerTool from './components/ResizerTool';
-import BgRemoverTool from './components/BgRemoverTool';
 import OCRTool from './components/OCRTool';
 import WebPTool from './components/WebPTool';
 import CropperTool from './components/CropperTool';
@@ -58,7 +57,6 @@ export default function App() {
     switch (activeTool) {
       case 'compressor': return <CompressorTool />;
       case 'resizer': return <ResizerTool />;
-      case 'bg-remover': return <BgRemoverTool />;
       case 'ocr': return <OCRTool />;
       case 'webp-converter': return <WebPTool />;
       case 'cropper': return <CropperTool />;
@@ -74,7 +72,7 @@ export default function App() {
   const currentTool = TOOLS.find(t => t.id === activeTool)!;
 
   return (
-    <div className="min-h-screen font-sans selection:bg-blue-200 dark:selection:bg-blue-800">
+    <div className="min-h-screen font-sans selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
       {/* Header / Sidebar */}
       <nav id="main-nav" className="fixed top-0 left-0 right-0 h-16 glass z-50 px-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -172,7 +170,7 @@ export default function App() {
         <main 
           id="main-content" 
           className={cn(
-            "flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-950 transition-all duration-300 ease-in-out",
+            "flex-1 overflow-y-auto bg-stone-50 dark:bg-[#0c0a09] transition-all duration-300 ease-in-out",
             isSidebarOpen ? "md:ml-72" : "md:ml-0"
           )}
         >
@@ -246,11 +244,11 @@ export default function App() {
             </div>
 
             {/* Right Desktop Ads Sidebar */}
-            <aside className="hidden xl:block w-[340px] border-l border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 p-6 space-y-6">
+            <aside className="hidden xl:block w-[340px] border-l border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/50 p-6 space-y-6">
               <div className="sticky top-6 space-y-6">
                 <AdSpace type="sidebar" label="Featured Partners" />
                 <AdSpace type="content" className="h-[250px]" label="Advertisement" />
-                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50">
+                <div className="p-4 rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950/50">
                   <h4 className="text-[10px] font-black uppercase text-slate-400 mb-2">Recommended Tools</h4>
                   <div className="space-y-2">
                     {TOOLS.slice(0, 3).map(tool => (

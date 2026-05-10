@@ -57,9 +57,9 @@ export default function WebPTool() {
                   <p className="font-bold">{originalFile?.type.split('/')[1].toUpperCase()}</p>
                 </div>
                 <div className="w-8 h-[2px] bg-slate-300"></div>
-                <div className="glass-card flex-1 !p-3 flex flex-col items-center border-blue-500/30">
-                  <span className="text-[10px] font-bold text-blue-400 uppercase">Output</span>
-                  <p className="font-bold text-blue-600">WEBP</p>
+                <div className="glass-card flex-1 !p-3 flex flex-col items-center border-indigo-500/30">
+                  <span className="text-[10px] font-bold text-indigo-400 uppercase">Output</span>
+                  <p className="font-bold text-indigo-600">WEBP</p>
                 </div>
              </div>
              
@@ -70,7 +70,7 @@ export default function WebPTool() {
              <div className="w-full space-y-4">
                 <button
                   onClick={handleDownload}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95"
                 >
                   <Download size={20} />
                   Download WebP Image

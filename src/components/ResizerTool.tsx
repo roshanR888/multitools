@@ -108,7 +108,7 @@ export default function ResizerTool() {
                   className={cn(
                     "p-4 rounded-2xl border-2 transition-all group flex flex-col items-center gap-2",
                     selectedPreset.id === preset.id 
-                      ? "border-blue-600 bg-blue-600/5 text-blue-600 scale-[1.02]" 
+                      ? "border-indigo-600 bg-indigo-600/5 text-indigo-600 scale-[1.02]" 
                       : "border-slate-100 dark:border-slate-800 hover:border-slate-300 text-slate-500"
                   )}
                 >
@@ -169,7 +169,7 @@ export default function ResizerTool() {
             <button
               onClick={downloadAll}
               disabled={isProcessing}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-blue-600/20 active:scale-95 disabled:opacity-50"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-indigo-600/20 active:scale-95 disabled:opacity-50"
             >
               {isProcessing ? <RefreshCw className="animate-spin" size={24} /> : <Download size={24} />}
               <div className="text-left">

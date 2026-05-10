@@ -17,7 +17,7 @@ export default function AdSpace({ className, type = 'content', label = 'Advertis
 
   return (
     <div className={cn(
-      "relative group overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/50 flex items-center justify-center transition-all hover:border-blue-500/20",
+      "relative group overflow-hidden rounded-2xl border border-stone-200 dark:border-stone-800 bg-stone-100/50 dark:bg-stone-900/50 flex items-center justify-center transition-all hover:border-indigo-500/20",
       typeStyles[type],
       className
     )}>
@@ -26,7 +26,7 @@ export default function AdSpace({ className, type = 'content', label = 'Advertis
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '24px 24px' }} />
       </div>
 
-      <div className="flex flex-col items-center gap-2 text-slate-400 dark:text-slate-600">
+      <div className="flex flex-col items-center gap-2 text-stone-400 dark:text-stone-600">
         <span className="text-[10px] font-black uppercase tracking-[0.2em]">{label}</span>
         <div className="w-8 h-8 rounded-full border-2 border-current border-dashed animate-[spin_10s_linear_infinite]" />
       </div>

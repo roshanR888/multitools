@@ -27,7 +27,7 @@ export default function Dropzone({ onFiles, accept = "image/*", multiple = false
       onDragOver={handleDragOver}
       onDrop={handleDrop}
       onClick={() => inputRef.current?.click()}
-      className="group relative border-2 border-dashed border-slate-300 dark:border-slate-800 rounded-3xl p-12 text-center hover:border-blue-500 transition-all cursor-pointer bg-white/50 dark:bg-slate-900/50"
+      className="group relative border-2 border-dashed border-stone-300 dark:border-stone-800 rounded-3xl p-12 text-center hover:border-indigo-500 transition-all cursor-pointer bg-white/50 dark:bg-stone-900/50"
     >
       <input
         type="file"
@@ -39,15 +39,15 @@ export default function Dropzone({ onFiles, accept = "image/*", multiple = false
       />
       
       <div className="flex flex-col items-center gap-4">
-        <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+        <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 flex items-center justify-center text-indigo-600 group-hover:scale-110 transition-transform">
           <Upload size={32} />
         </div>
         <div>
-          <p className="text-lg font-bold text-slate-900 dark:text-white">
+          <p className="text-lg font-bold text-stone-900 dark:text-white">
             Drag & drop images here
           </p>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">
-            or click to browse from your device
+          <p className="text-stone-500 dark:text-stone-400 text-sm">
+            or click to select files from device
           </p>
         </div>
       </div>

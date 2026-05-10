@@ -93,8 +93,8 @@ export default function CropperTool() {
                   className={cn(
                     "px-4 py-2 rounded-xl border text-sm font-bold transition-all",
                     (isNaN(preset.ratio) && isNaN(activeRatio)) || preset.ratio === activeRatio
-                      ? "bg-blue-600 text-white border-blue-600 shadow-md"
-                      : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-blue-500"
+                      ? "bg-indigo-600 text-white border-indigo-600 shadow-md"
+                      : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-500"
                   )}
                 >
                   {preset.label}
@@ -106,7 +106,7 @@ export default function CropperTool() {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleSave}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95"
             >
               <Crop size={20} />
               Save Crop

@@ -78,13 +78,13 @@ export default function OCRTool() {
                    exit={{ opacity: 0 }}
                    className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm flex flex-col items-center justify-center text-white gap-4 z-20"
                  >
-                   <RefreshCw className="animate-spin text-blue-400" size={40} />
+                   <RefreshCw className="animate-spin text-indigo-400" size={40} />
                    <div className="text-center px-4 w-full max-w-xs">
                       <p className="font-bold text-lg mb-1">{status}</p>
-                      {progress > 0 && <p className="text-sm font-medium text-blue-300 mb-3">{progress}%</p>}
+                      {progress > 0 && <p className="text-sm font-medium text-indigo-300 mb-3">{progress}%</p>}
                       <div className="w-full h-2 bg-white/20 rounded-full overflow-hidden">
                         <motion.div 
-                          className="h-full bg-blue-500" 
+                          className="h-full bg-indigo-500" 
                           initial={{ width: 0 }}
                           animate={{ width: `${progress}%` }}
                         />
@@ -116,7 +116,7 @@ export default function OCRTool() {
                 <button
                   onClick={handleCopy}
                   disabled={!extractedText || isProcessing}
-                  className="flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 transition-all"
+                  className="flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 transition-all"
                 >
                   {copied ? <Check size={14} /> : <Copy size={14} />}
                   {copied ? 'Copied!' : 'Copy to Clipboard'}

@@ -1,22 +1,20 @@
 import { 
-  Maximize, 
-  Image as ImageIcon, 
-  Trash2, 
-  Languages, 
-  Zap, 
+  Scaling, 
+  ScanSearch, 
+  Wind, 
   Crop, 
   Stamp, 
   Pipette, 
-  Minimize2,
   QrCode,
-  Link,
-  FileText
+  CloudUpload,
+  FilePenLine,
+  Scale,
+  MoveDiagonal
 } from 'lucide-react';
 
 export type ToolId = 
   | 'compressor' 
   | 'resizer' 
-  | 'bg-remover' 
   | 'ocr' 
   | 'webp-converter' 
   | 'cropper' 
@@ -37,79 +35,72 @@ export interface Tool {
 export const TOOLS: Tool[] = [
   {
     id: 'compressor',
-    name: 'Smart Image Compressor',
-    description: 'Compress MB to KB with precision slider.',
-    icon: Minimize2,
-    seoDescription: 'Our smart image compressor helps you reduce image file size without losing quality. Perfect for optimizing web images and saving storage space. Select your target size in KB and our AI-driven logic handles the rest.'
+    name: 'Precision Compressor',
+    description: 'Shrink MB to KB with zero quality loss.',
+    icon: Scale,
+    seoDescription: 'Professional image compression tool designed to reduce file sizes (MB to KB) specifically for web performance. Maintain visual fidelity while achieving the smallest footprint possible.'
   },
   {
     id: 'resizer',
-    name: 'Bulk Image Resizer',
-    description: 'Resize for Social Media instantly.',
-    icon: Maximize,
-    seoDescription: 'Batch resize images for Instagram, YouTube, TikTok, and X. Maintain aspect ratios and save time using our high-performance bulk processing tool.'
-  },
-  {
-    id: 'bg-remover',
-    name: 'AI Background Remover',
-    description: 'Remove background using AI in seconds.',
-    icon: Trash2,
-    seoDescription: 'Free AI background removal powered by Puter.js. Simply upload your photo and get a transparent PNG in seconds without any server-side processing.'
+    name: 'Canvas Resizer',
+    description: 'Transform dimensions for any platform.',
+    icon: Scaling,
+    seoDescription: 'Adapt your images for social media, blogs, or print. Batch resize multiple images simultaneously while preserving aspect ratios and crystal-clear quality.'
   },
   {
     id: 'ocr',
-    name: 'Image to Text (OCR)',
-    description: 'Extract text from images using AI.',
-    icon: Languages,
-    seoDescription: 'Convert images to editable text using Tesseract.js. Supports multi-language OCR and instant clipboard copying. Great for digitizing documents and receipts.'
+    name: 'Smart OCR Scanner',
+    description: 'Turn images into editable text instantly.',
+    icon: ScanSearch,
+    seoDescription: 'Advanced Optical Character Recognition tool that extracts text from documents, receipts, and screenshots with high accuracy. Supports multiple languages and quick export.'
   },
   {
     id: 'webp-converter',
-    name: 'Image to WebP Converter',
-    description: 'Convert PNG/JPG to SEO-friendly WebP.',
-    icon: Zap,
-    seoDescription: 'Instantly convert images to WebP format to boost your website SEO performance. WebP provides superior lossless and lossy compression for images on the web.'
+    name: 'Next-Gen WebP',
+    description: 'Modern WebP optimization for SEO.',
+    icon: Wind,
+    seoDescription: 'Convert traditional JPG and PNG files into high-performance WebP images. Essential for modern web development and improving Google PageSpeed scores.'
   },
   {
     id: 'cropper',
-    name: 'Social Media Cropper',
-    description: 'Precision cropping with aspect ratio presets.',
+    name: 'Focus Cropper',
+    description: 'Frame your shots with surgical precision.',
     icon: Crop,
-    seoDescription: 'Interactive image cropping tool with fixed aspect ratios for popular social platforms. Use Cropper.js for professional-grade results right in your browser.'
+    seoDescription: 'Professional cropping tool with built-in templates for Instagram, LinkedIn, and more. Precise pixel-perfect framing with interactive boundary handles.'
   },
   {
     id: 'watermark',
-    name: 'Watermark Adder',
-    description: 'Protect your photos with custom logos.',
+    name: 'Brand Protector',
+    description: 'Secure your work with custom signatures.',
     icon: Stamp,
-    seoDescription: 'Add text or image watermarks to your photos. Adjust opacity, sizing, and placement (Tile or Corner) to protect your creative content from unauthorized use.'
+    seoDescription: 'Apply non-destructive watermarks, signatures, or branding to your batches of images. Customize opacity and placement to safeguard your digital property.'
   },
   {
     id: 'color-picker',
-    name: 'Color Picker from Image',
-    description: 'Get HEX/RGB codes from any pixel.',
+    name: 'Palette Extractor',
+    description: 'Capture exact colors from any pixel.',
     icon: Pipette,
-    seoDescription: 'Accurately pick colors from any image. Extract HEX and RGB codes with a simple click. Essential tool for designers and developers looking for color inspiration.'
+    seoDescription: 'Designer-focused color picking utility. Extract HEX, RGB, and HSL codes from your images to build consistent palettes and design systems.'
   },
   {
     id: 'qr-generator',
-    name: 'QR Code Generator',
-    description: 'Create custom QR codes for any URL or text.',
+    name: 'QR Architect',
+    description: 'Build stylish, scan-ready QR codes.',
     icon: QrCode,
-    seoDescription: 'Generate high-quality QR codes for websites, contact info, or plain text. Customize color and size, and download your QR code as a PNG file for printed or digital use.'
+    seoDescription: 'Create high-resolution QR codes for URLs, contact info, or encrypted text. Customizable sizes and error correction for perfect scanning every time.'
   },
   {
     id: 'image-to-url',
-    name: 'Image to URL',
-    description: 'Convert images to Base64 or Public Links.',
-    icon: Link,
-    seoDescription: 'Convert any image to a Data URL (Base64) or a temporary public online link instantly. Perfect for sharing images or embedding them in code. Fast, secure, and easy.'
+    name: 'Cloud Uploader',
+    description: 'Host images and generate public links.',
+    icon: CloudUpload,
+    seoDescription: 'Instantly host images and generate secure, shareable public URLs or Base64 strings. Perfect for developers, bloggers, and quick file sharing.'
   },
   {
     id: 'pdf-editor',
-    name: 'Online PDF Editor',
-    description: 'Edit, sign & annotate PDF files online.',
-    icon: FileText,
-    seoDescription: 'Edit your PDF files online for free. Fill out forms, add text, images, and shapes. Sign documents, annotate with highlights and strikethroughs. Fast, secure, and browser-based PDF editing.'
+    name: 'PDF Master Editor',
+    description: 'Edit and sign documents on the fly.',
+    icon: FilePenLine,
+    seoDescription: 'Complete browser-based PDF utility. Annotate, sign, merge, and edit PDF documents without downloading bulky software. Fast, secure, and free.'
   }
 ];

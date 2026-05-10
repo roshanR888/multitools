@@ -8,20 +8,20 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+    @apply bg-stone-50 text-slate-900 transition-colors duration-300;
   }
   
   body.dark {
-    @apply bg-slate-950 text-slate-50;
+    @apply bg-[#0c0a09] text-slate-50;
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border border-white/20 dark:border-slate-800/20 shadow-xl;
+    @apply bg-white/70 dark:bg-stone-900/70 backdrop-blur-xl border border-white/20 dark:border-stone-800/20 shadow-xl;
   }
   
   .glass-card {
-    @apply bg-white/40 dark:bg-slate-900/40 backdrop-blur-md border border-white/10 dark:border-slate-800/10 rounded-2xl p-6 shadow-sm;
+    @apply bg-white/40 dark:bg-stone-900/40 backdrop-blur-md border border-white/10 dark:border-stone-800/10 rounded-2xl p-6 shadow-sm;
   }
 }

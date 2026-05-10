@@ -105,7 +105,7 @@ export default function ImageToUrlTool() {
                     onClick={() => setActiveTab('data')}
                     className={cn(
                       "flex-1 flex items-center justify-center gap-2 py-4 text-xs font-bold uppercase tracking-wider transition-all",
-                      activeTab === 'data' ? "bg-slate-50 dark:bg-slate-800/50 text-blue-600 border-b-2 border-blue-600" : "text-slate-400"
+                      activeTab === 'data' ? "bg-slate-50 dark:bg-slate-800/50 text-indigo-600 border-b-2 border-indigo-600" : "text-slate-400"
                     )}
                   >
                     <FileCode size={14} />
@@ -116,7 +116,7 @@ export default function ImageToUrlTool() {
                     disabled={!onlineUrl}
                     className={cn(
                       "flex-1 flex items-center justify-center gap-2 py-4 text-xs font-bold uppercase tracking-wider transition-all disabled:opacity-40",
-                      activeTab === 'public' ? "bg-slate-50 dark:bg-slate-800/50 text-blue-600 border-b-2 border-blue-600" : "text-slate-400"
+                      activeTab === 'public' ? "bg-slate-50 dark:bg-slate-800/50 text-indigo-600 border-b-2 border-indigo-600" : "text-slate-400"
                     )}
                   >
                     <Globe size={14} />
@@ -134,7 +134,7 @@ export default function ImageToUrlTool() {
                      <textarea 
                       readOnly
                       value={dataUrl || ''}
-                      className="w-full h-40 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border-none font-mono text-[10px] resize-none focus:ring-2 ring-blue-500 transition-all text-slate-600 dark:text-slate-300"
+                      className="w-full h-40 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border-none font-mono text-[10px] resize-none focus:ring-2 ring-indigo-500 transition-all text-slate-600 dark:text-slate-300"
                     />
                    </div>
                  ) : (
@@ -153,7 +153,7 @@ export default function ImageToUrlTool() {
                           <div className="flex gap-2">
                             <button 
                               onClick={() => copyToClipboard(onlineUrl)}
-                              className="flex-1 bg-blue-600 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2"
+                              className="flex-1 bg-indigo-600 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2"
                             >
                               {copied ? <Check size={18} /> : <Copy size={18} />}
                               {copied ? 'Copied' : 'Copy Link'}
@@ -189,7 +189,7 @@ export default function ImageToUrlTool() {
                 <button
                   onClick={uploadToCloud}
                   disabled={isUploading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95 disabled:opacity-50"
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95 disabled:opacity-50"
                 >
                   {isUploading ? <Loader2 size={20} className="animate-spin" /> : <Globe size={20} />}
                   {isUploading ? 'Uploading...' : 'Generate Public Link'}

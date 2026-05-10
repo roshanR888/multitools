@@ -188,7 +188,7 @@ export default function WatermarkTool() {
                    onClick={() => setActiveIndex(i)}
                    className={cn(
                      "px-4 py-2 rounded-xl border text-xs font-bold transition-all whitespace-nowrap flex items-center gap-2",
-                     activeIndex === i ? "bg-blue-600 text-white border-blue-600" : "bg-white dark:bg-slate-900 text-slate-500"
+                     activeIndex === i ? "bg-indigo-600 text-white border-indigo-600" : "bg-white dark:bg-slate-900 text-slate-500"
                    )}
                  >
                    <Type size={14} />
@@ -198,7 +198,7 @@ export default function WatermarkTool() {
                {watermarks.length < 5 && (
                  <button 
                    onClick={addWatermark}
-                   className="px-4 py-2 rounded-xl border border-dashed border-slate-300 text-slate-400 hover:border-blue-500 hover:text-blue-500 transition-all"
+                   className="px-4 py-2 rounded-xl border border-dashed border-slate-300 text-slate-400 hover:border-indigo-500 hover:text-indigo-500 transition-all"
                  >
                    <Plus size={16} />
                  </button>
@@ -223,7 +223,7 @@ export default function WatermarkTool() {
                   type="text" 
                   value={currentwm.text}
                   onChange={(e) => updateActive({ text: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 ring-blue-500 transition-all font-semibold"
+                   className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 ring-indigo-500 transition-all font-semibold"
                 />
               </div>
 
@@ -231,27 +231,27 @@ export default function WatermarkTool() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-bold text-slate-400 uppercase">Opacity</label>
-                    <span className="text-[10px] font-bold text-blue-500">{currentwm.opacity}%</span>
+                    <span className="text-[10px] font-bold text-indigo-500">{currentwm.opacity}%</span>
                   </div>
                   <input 
                     type="range" 
                     min="5" max="100" 
                     value={currentwm.opacity} 
                     onChange={(e) => updateActive({ opacity: parseInt(e.target.value) })}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <label className="text-xs font-bold text-slate-400 uppercase">Rotation</label>
-                    <span className="text-[10px] font-bold text-blue-500">{currentwm.rotation}°</span>
+                    <span className="text-[10px] font-bold text-indigo-500">{currentwm.rotation}°</span>
                   </div>
                   <input 
                     type="range" 
                     min="-180" max="180" 
                     value={currentwm.rotation} 
                     onChange={(e) => updateActive({ rotation: parseInt(e.target.value) })}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
               </div>
@@ -259,14 +259,14 @@ export default function WatermarkTool() {
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
                   <label className="text-xs font-bold text-slate-400 uppercase">Font Size</label>
-                  <span className="text-[10px] font-bold text-blue-500">{currentwm.fontSize}%</span>
+                  <span className="text-[10px] font-bold text-indigo-500">{currentwm.fontSize}%</span>
                 </div>
                 <input 
                   type="range" 
                   min="10" max="200" 
                   value={currentwm.fontSize} 
                   onChange={(e) => updateActive({ fontSize: parseInt(e.target.value) })}
-                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                 />
               </div>
             </div>
@@ -277,7 +277,7 @@ export default function WatermarkTool() {
                  downloadBlob(blob, 'watermarked.jpg');
                  confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
                }}
-               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95"
             >
               <Download size={20} />
               Download Result

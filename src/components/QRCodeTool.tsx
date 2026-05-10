@@ -61,7 +61,7 @@ export default function QRCodeTool() {
               </label>
               <textarea
                 id="qr-input"
-                className="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-xl p-4 text-sm font-medium focus:ring-2 focus:ring-blue-500 min-h-[120px] resize-none"
+                className="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-xl p-4 text-sm font-medium focus:ring-2 focus:ring-indigo-500 min-h-[120px] resize-none"
                 placeholder="Enter URL or text to generate QR code..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
@@ -101,7 +101,7 @@ export default function QRCodeTool() {
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="text-sm font-bold">Size</label>
-                  <span className="text-xs font-mono text-blue-600 font-bold">{size}px</span>
+                  <span className="text-xs font-mono text-indigo-600 font-bold">{size}px</span>
                 </div>
                 <input
                   type="range"
@@ -110,14 +110,14 @@ export default function QRCodeTool() {
                   step="64"
                   value={size}
                   onChange={(e) => setSize(parseInt(e.target.value))}
-                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between mb-2">
                   <label className="text-sm font-bold">Margin</label>
-                  <span className="text-xs font-mono text-blue-600 font-bold">{margin}</span>
+                  <span className="text-xs font-mono text-indigo-600 font-bold">{margin}</span>
                 </div>
                 <input
                   type="range"
@@ -126,7 +126,7 @@ export default function QRCodeTool() {
                   step="1"
                   value={margin}
                   onChange={(e) => setMargin(parseInt(e.target.value))}
-                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                 />
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function QRCodeTool() {
             <button
               onClick={handleDownload}
               disabled={!qrImageUrl}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/20 active:scale-95 disabled:opacity-50"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-600/20 active:scale-95 disabled:opacity-50"
             >
               <Download size={20} />
               Download PNG
@@ -183,8 +183,8 @@ export default function QRCodeTool() {
             )}
           </div>
           
-          <div className="glass-card p-4 bg-blue-50/50 dark:bg-blue-900/10 border border-blue-500/10">
-            <p className="text-xs font-medium text-blue-600/80 dark:text-blue-400/80 leading-relaxed">
+          <div className="glass-card p-4 bg-indigo-50/50 dark:bg-indigo-900/10 border border-indigo-500/10">
+            <p className="text-xs font-medium text-indigo-600/80 dark:text-indigo-400/80 leading-relaxed">
               <strong>Tip:</strong> QR codes can handle up to 4,296 alphanumeric characters, but smaller amounts of text make it easier for cameras to scan.
             </p>
           </div>
